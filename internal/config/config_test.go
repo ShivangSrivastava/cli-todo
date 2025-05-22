@@ -3,8 +3,6 @@ package config
 import (
 	"os"
 	"testing"
-
-	"github.com/ShivangSrivastava/cli-todo/internal/models"
 )
 
 // Test the GetConfig function
@@ -16,7 +14,7 @@ func TestGetConfig(t *testing.T) {
 
 	config := GetConfig()
 
-	expected := models.Config{
+	expected := Config{
 		PostgresUser:     "testuser",
 		PostgresPassword: "testpassword",
 		PostgresDB:       "testdb",

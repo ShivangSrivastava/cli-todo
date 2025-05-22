@@ -2,13 +2,17 @@ package config
 
 import (
 	"os"
-
-	"github.com/ShivangSrivastava/cli-todo/internal/models"
 )
 
+type Config struct {
+	PostgresUser     string
+	PostgresPassword string
+	PostgresDB       string
+}
+
 // Load dotenv file
-func GetConfig() models.Config {
-	config := models.Config{
+func GetConfig() Config {
+	config := Config{
 		PostgresUser:     os.Getenv("POSTGRES_USER"),
 		PostgresPassword: os.Getenv("POSTGRES_PASSWORD"),
 		PostgresDB:       os.Getenv("POSTGRES_DB"),
