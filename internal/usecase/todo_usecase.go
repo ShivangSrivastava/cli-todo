@@ -5,13 +5,14 @@ import (
 	"strings"
 
 	"github.com/ShivangSrivastava/cli-todo/internal/entity"
+	"github.com/ShivangSrivastava/cli-todo/internal/interfaces"
 )
 
 type TodoUsecase struct {
-	repo TodoRepository
+	repo interfaces.TodoRepository
 }
 
-func NewTodoUsecase(repo TodoRepository) *TodoUsecase {
+func NewTodoUsecase(repo interfaces.TodoRepository) *TodoUsecase {
 	return &TodoUsecase{
 		repo: repo,
 	}
